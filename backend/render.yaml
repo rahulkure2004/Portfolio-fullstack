@@ -1,0 +1,12 @@
+# Render Blueprint — set env vars in the dashboard (DATABASE_URL from Railway MySQL, JWT_SECRET, MAIL_*, etc.)
+services:
+  - type: web
+    name: rahulkure-portfolio-api
+    runtime: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/portfolio-backend-1.0.0.jar
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: JAVA_TOOL_OPTIONS
+        value: -Xmx512m
