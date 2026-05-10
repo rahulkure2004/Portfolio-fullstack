@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: portfolio-backend
+
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 8MB
+      max-request-size: 8MB
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${PORT:8080}
+
+  error:
+    include-message: always
+
+portfolio:
+  jwt:
+    secret: ${JWT_SECRET}
+    expiration-ms: 86400000
+
+  admin:
+    username: ${ADMIN_USERNAME}
+    password: ${ADMIN_PASSWORD}
+    email: ${ADMIN_EMAIL}
+
+  cors-origins: ${CORS_ORIGINS:http://localhost:5173}
+
+  upload-dir: ${UPLOAD_DIR:uploads}
+
+  public-base-url: ${PUBLIC_BASE_URL:http://localhost:8080}
