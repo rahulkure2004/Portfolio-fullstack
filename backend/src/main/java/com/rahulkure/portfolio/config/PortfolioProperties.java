@@ -13,7 +13,7 @@ public class PortfolioProperties {
     private Jwt jwt = new Jwt();
     private Admin admin = new Admin();
     private String uploadDir = "uploads";
-    private String publicBaseUrl = "http://localhost:8080";
+    private String publicBaseUrl = "https://rahul-portfolio-backend-hbmy.onrender.com";
     private String corsOrigins = "http://localhost:5173";
 
     public Jwt getJwt() {

@@ -132,7 +132,7 @@ public class AdminController {
 
         Files.write(path, file.getBytes());
 
-        String imageUrl = "http://localhost:8080/uploads/projects/" + fileName;
+        String imageUrl = "https://rahul-portfolio-backend-hbmy.onrender.com/uploads/projects/" + fileName;
 
         return ResponseEntity.ok(imageUrl);
     }
